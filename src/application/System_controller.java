@@ -26,6 +26,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import jdk.jfr.Event;
 
 public class System_controller implements Initializable{
 	
@@ -44,6 +45,7 @@ public class System_controller implements Initializable{
 	@FXML
 	public MenuItem aide;
 	
+	ArrayList<TextField> Arrtxt=new ArrayList<TextField>();
 	
 	// ouvrire la page de choix
     @FXML
@@ -389,17 +391,19 @@ public class System_controller implements Initializable{
     //accepter just les nombres
     public void keyTaped(KeyEvent event) {
     	char c= event.getCharacter().charAt(0);
-    	
-    	if(!(Character.isDigit(c))) {
+    
+    	if(!Character.isDigit(c)) {
     		event.consume();
+    		
     	}
     	
     }
-
+  
+    
+    
    
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		
-		
+		 
 	}
 }
